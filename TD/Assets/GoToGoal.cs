@@ -5,12 +5,17 @@ using UnityEngine.AI;
 
 public class GoToGoal : MonoBehaviour
 {
-    public Transform Goal;
+
+    public Transform goal;
+    public Transform spawn;
+
     // Start is called before the first frame update
     void Start()
     {
-       NavMeshAgent agent = GetComponent<NavMeshAgent>();
-       agent.destination = Goal.position;
+        transform.position = spawn.position;
+        
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.destination = goal.position;
 
     }
 
