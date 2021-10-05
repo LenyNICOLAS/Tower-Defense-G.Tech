@@ -6,6 +6,8 @@
 Assets/AssetStoreTools*
 Logs/
 UserSettings/
+Logs/AssetImportWorker0
+
 
 # Visual Studio cache directory
 .vs/
