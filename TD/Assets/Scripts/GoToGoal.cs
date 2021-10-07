@@ -24,4 +24,11 @@ public class GoToGoal : MonoBehaviour
     {
         
     }
+
+    /*
+    private void OnMouseDown()
+    {
+        
+    }
+    */
 }
