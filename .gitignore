@@ -4,10 +4,6 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-Logs/
-UserSettings/
-Logs/AssetImportWorker0.log
-
 
 # Visual Studio cache directory
 .vs/
