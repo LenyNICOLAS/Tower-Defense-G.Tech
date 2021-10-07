@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall ennemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2950370184965711616, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
 --- !u!4 &652711779 stripped
@@ -193,6 +197,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 712097952272937810, guid: 1f8e83a3fee8c6641bfb17027cbfc3db, type: 3}
   m_PrefabInstance: {fileID: 1765176418}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &682588680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -9133553027287778488, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 652711779}
+    - target: {fileID: -9133553027287778488, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: spawn
+      value: 
+      objectReference: {fileID: 898850387}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 861644047782623229, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950370184965711616, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92a96073523400f4983cdc8a4da0504a, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +842,10 @@ PrefabInstance:
     - target: {fileID: 712097952272937810, guid: 1f8e83a3fee8c6641bfb17027cbfc3db, type: 3}
       propertyPath: m_LocalPosition.z
       value: 15.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776657887709192979, guid: 1f8e83a3fee8c6641bfb17027cbfc3db, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5364469761244317288, guid: 1f8e83a3fee8c6641bfb17027cbfc3db, type: 3}
       propertyPath: m_Name
