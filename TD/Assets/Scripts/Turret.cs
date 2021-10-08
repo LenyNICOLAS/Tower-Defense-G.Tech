@@ -9,9 +9,10 @@ public class Turret : MonoBehaviour
 
     public GameObject CanonPrefab;
     public Transform target = null;
-    public float speed = 1.0f;
 
-    private float lastBulletFired = -1.0f;
+    public float cadence = 1.0f;
+    public float rotationSpeed = 1.0f;
+    private float lastBulletFired = -0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,19 +28,19 @@ public class Turret : MonoBehaviour
 
         if (target != null)
         {
-            float singleStep = speed * Time.deltaTime;
+            float singleStep = rotationSpeed * Time.deltaTime;
             Vector3 targetDirection = target.position - transform.position;
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
 
             Debug.DrawRay(CanonPrefab.transform.position, newDirection, Color.red);
             transform.rotation = Quaternion.LookRotation(newDirection);
 
-            if (dt > 1.0f)
+            if (dt > 1.0/cadence && transform.forward == newDirection)
             {
                 GameObject bullet = Instantiate(BulletPrefab, CanonPrefab.transform.position,
                     Quaternion.identity, BulletContainer) as GameObject;
 
-                BulletPrefab.GetComponent<Bullet>().direction = newDirection;
+                BulletPrefab.GetComponent<Bullet>().target = target;
                 lastBulletFired = Time.time;
             }
 
