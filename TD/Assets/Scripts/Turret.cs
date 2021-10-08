@@ -12,6 +12,7 @@ public class Turret : MonoBehaviour
 
     public float cadence = 1.0f;
     public float rotationSpeed = 1.0f;
+
     private float lastBulletFired = -0.5f;
 
     // Start is called before the first frame update
@@ -31,11 +32,8 @@ public class Turret : MonoBehaviour
             float singleStep = rotationSpeed * Time.deltaTime;
             Vector3 targetDirection = target.position - transform.position;
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
-            Debug.DrawRay(CanonPrefab.transform.position, newDirection, Color.red);
-            transform.rotation = Quaternion.LookRotation(newDirection);
-
-            if (dt > 1.0/cadence && transform.forward == newDirection)
+            
+            if (dt > 1.0/cadence && Vector3.Angle(transform.forward, newDirection) < Mathf.PI/180)
             {
                 GameObject bullet = Instantiate(BulletPrefab, CanonPrefab.transform.position,
                     Quaternion.identity, BulletContainer) as GameObject;
@@ -44,6 +42,8 @@ public class Turret : MonoBehaviour
                 lastBulletFired = Time.time;
             }
 
+            Debug.DrawRay(CanonPrefab.transform.position, newDirection*3, Color.red);
+            transform.rotation = Quaternion.LookRotation(newDirection);
         }
 
 

@@ -23,6 +23,10 @@ public class Bullet : MonoBehaviour
 
             transform.Translate(speed * newDirection.normalized * Time.deltaTime);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,7 +35,10 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
             //Debug.Log("bullet destroyed");
-
+            if (other.CompareTag("Enemy"))
+            {
+                other.GetComponent<Enemy>().hp--;
+            }
         }
     }
 
