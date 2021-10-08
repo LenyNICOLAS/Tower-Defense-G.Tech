@@ -28,13 +28,13 @@ public class Range : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("enemy detected");
+        //Debug.Log("enemy detected");
         turret.target = other.transform;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("enemy out of range");
+        //Debug.Log("enemy out of range");
         turret.target = null;
     }
 

@@ -11,6 +11,8 @@ public class Turret : MonoBehaviour
     public Transform target = null;
     public float speed = 1.0f;
 
+    private float lastBulletFired = -1.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,19 +23,26 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float dt = Time.time - lastBulletFired;
+
         if (target != null)
         {
             float singleStep = speed * Time.deltaTime;
             Vector3 targetDirection = target.position - transform.position;
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
 
-            Debug.DrawRay(transform.position, newDirection, Color.red);
+            Debug.DrawRay(CanonPrefab.transform.position, newDirection, Color.red);
             transform.rotation = Quaternion.LookRotation(newDirection);
 
-            GameObject bullet = Instantiate(BulletPrefab, CanonPrefab.transform.position,
-                Quaternion.identity, BulletContainer) as GameObject;
+            if (dt > 1.0f)
+            {
+                GameObject bullet = Instantiate(BulletPrefab, CanonPrefab.transform.position,
+                    Quaternion.identity, BulletContainer) as GameObject;
 
-            BulletPrefab.GetComponent<Bullet>().direction = newDirection;
+                BulletPrefab.GetComponent<Bullet>().direction = newDirection;
+                lastBulletFired = Time.time;
+            }
+
         }
 
 

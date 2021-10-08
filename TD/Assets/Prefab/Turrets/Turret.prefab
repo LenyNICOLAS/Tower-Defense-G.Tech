@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 2856118186354244580, guid: 7e6240bcd27753e44a26d188e2706435, type: 3}
   BulletContainer: {fileID: 1193109257783756045, guid: 8f218d92032b28748aa780062021e00a, type: 3}
-  CanonPrefab: {fileID: 4598664377010358304, guid: e41b7041600131c46af40ed13df1ec1b, type: 3}
+  CanonPrefab: {fileID: 8680644219270563239}
   target: {fileID: 0}
   speed: 2.5
 --- !u!1001 &3251928566595709552
@@ -256,6 +256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e41b7041600131c46af40ed13df1ec1b, type: 3}
+--- !u!1 &8680644219270563239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4598664377010358304, guid: e41b7041600131c46af40ed13df1ec1b, type: 3}
+  m_PrefabInstance: {fileID: 5162931731771788679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4191632742244558036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9047099206341994835, guid: e41b7041600131c46af40ed13df1ec1b, type: 3}
