@@ -18,7 +18,15 @@ public class Range : MonoBehaviour
         
     }
 
+    /*
     private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("enemy detected");
+        turret.target = other.transform;
+    }
+    */
+
+    private void OnTriggerStay(Collider other)
     {
         Debug.Log("enemy detected");
         turret.target = other.transform;
