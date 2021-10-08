@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public GameObject BulletPrefab;
-    public Transform BulletContainer;
+    public GameObject bulletPrefab;
+    public GameObject canonPrefab;
+    public GameObject spawn = null;
 
-    public GameObject CanonPrefab;
+
+    public Transform range;
+    public Transform bulletContainer = null;
     public Transform target = null;
 
     public float cadence = 1.0f;
@@ -25,6 +28,17 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (spawn != null)
+        {
+
+            if (spawn.GetComponent<Spawn>().isLaunched)
+            {
+                ColliderOn();
+            }
+
+        }
+
         float dt = Time.time - lastBulletFired;
 
         if (target != null)
@@ -32,20 +46,27 @@ public class Turret : MonoBehaviour
             float singleStep = rotationSpeed * Time.deltaTime;
             Vector3 targetDirection = target.position - transform.position;
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-            
+            Vector3 firePosition = canonPrefab.transform.position;
+
             if (dt > 1.0/cadence && Vector3.Angle(transform.forward, newDirection) < Mathf.PI/180)
             {
-                GameObject bullet = Instantiate(BulletPrefab, CanonPrefab.transform.position,
-                    Quaternion.identity, BulletContainer) as GameObject;
+                GameObject bullet = Instantiate(bulletPrefab, firePosition,
+                    Quaternion.identity, bulletContainer) as GameObject;
 
-                BulletPrefab.GetComponent<Bullet>().target = target;
+                bulletPrefab.GetComponent<Bullet>().target = target;
                 lastBulletFired = Time.time;
             }
 
-            Debug.DrawRay(CanonPrefab.transform.position, newDirection*3, Color.red);
+            Debug.DrawRay(firePosition, newDirection*3, Color.red);
             transform.rotation = Quaternion.LookRotation(newDirection);
         }
 
 
     }
+
+    public void ColliderOn()
+    {
+        range.localScale = new Vector3(20, 20, 20);
+    }
+
 }
