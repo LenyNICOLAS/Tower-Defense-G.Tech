@@ -31,13 +31,6 @@ public class TextUpdater : MonoBehaviour
 
 
 
-    public void btn_change_scene(string Niveau1)
-    { 
-        SceneManager.LoadScene(Niveau1); 
-    
-    }
-
-
 
 
 
