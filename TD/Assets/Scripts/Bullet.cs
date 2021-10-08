@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Vector3 direction;
+    
     public float speed = 1.0f;
+    public Transform target = null;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,22 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * direction * Time.deltaTime);
+        if (target != null)
+        {
+            Vector3 newDirection = target.position - transform.position;
+
+            transform.Translate(speed * newDirection.normalized * Time.deltaTime);
+        }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (true)
+        {
+            Destroy(gameObject);
+            //Debug.Log("bullet destroyed");
+
+        }
+    }
+
 }
