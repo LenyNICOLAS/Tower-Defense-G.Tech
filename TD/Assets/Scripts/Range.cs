@@ -29,7 +29,11 @@ public class Range : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log("enemy detected");
-        turret.target = other.transform;
+        if (!other.CompareTag("Turret"))
+        {
+            turret.target = other.transform;
+
+        }
     }
 
     private void OnTriggerExit(Collider other)
