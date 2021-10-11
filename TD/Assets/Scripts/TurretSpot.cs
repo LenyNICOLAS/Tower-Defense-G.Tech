@@ -27,8 +27,7 @@ public class TurretSpot : MonoBehaviour
     {
         Destroy(turret);
 
-        turret = Instantiate(turretPrefab, transform.position + new Vector3(0, 2, 0),
-                    Quaternion.identity) as GameObject;
+        turret = Instantiate(turretPrefab, transform.position + new Vector3(0, 2, 0), Quaternion.identity) as GameObject;
 
         turret.GetComponent<Turret>().bulletContainer = bulletContainer;
         turret.GetComponent<Turret>().spawn = spawn;

@@ -19,8 +19,7 @@ public class Spawn : MonoBehaviour
 
         for(int i=0; i<10; ++i)
         {
-            GameObject enemy = Instantiate(EnemyPrefab, transform.position,
-                        Quaternion.identity) as GameObject;
+            GameObject enemy = Instantiate(EnemyPrefab, transform.position, Quaternion.identity) as GameObject;
 
             enemy.GetComponent<GoToGoal>().goal = goal;
             enemy.GetComponent<GoToGoal>().spawn = transform;
