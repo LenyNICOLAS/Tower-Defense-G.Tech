@@ -25,8 +25,8 @@ public class SetPosition : MonoBehaviour
 
     void Update()
     {
-        Ray ray = cam.ScreenPointToRay(pos);
-        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+        //Ray ray = cam.ScreenPointToRay(pos);
+        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
         if (Input.GetButtonDown("Fire1"))
         {

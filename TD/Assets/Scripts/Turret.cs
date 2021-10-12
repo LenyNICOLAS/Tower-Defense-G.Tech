@@ -66,7 +66,7 @@ public class Turret : MonoBehaviour
 
     public void ColliderOn()
     {
-        range.localScale = new Vector3(20, 20, 20);
+        range.localScale = new Vector3(15, 1, 15);
     }
 
 }
