@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    private int hp = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +21,6 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+        hp--;
     }
 }
