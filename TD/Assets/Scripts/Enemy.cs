@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+            GameManager.Instance.EnemiesKilled++;
         }
     }
 }
