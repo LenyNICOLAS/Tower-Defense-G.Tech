@@ -7,6 +7,7 @@ public class ToggleVisibility : MonoBehaviour
 {
 
     CanvasGroup canvasGroup;
+    private bool gameIsWon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,15 @@ public class ToggleVisibility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if(GameManager.Instance.IsGameWon() != gameIsWon)
+        {
+            gameIsWon = GameManager.Instance.IsGameWon();
+            if (tag != "LaunchButton")
+            {
+                toggle();
+            }
+        }
     }
 
     public void toggle()

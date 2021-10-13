@@ -6,9 +6,6 @@ public class GameManager : MonoBehaviour
 {
    
     public static GameManager Instance { get; private set; }
-    
-
-    public GameObject Canvas;
 
     public int EnemiesKilled = 0;
 
@@ -20,24 +17,27 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
-        Instance = this;
-
-        DontDestroyOnLoad(gameObject);
+    public bool IsGameWon()
+    {
+        return gameIsWon;
     }
 
     public void GameWon()
     {
         gameIsWon = true;
-        for (int i = 0; i < Canvas.transform.childCount; ++i)
-        {
-            var button = Canvas.transform.GetChild(i);
-            if(button.tag != "LaunchButton")
-            {
-                Canvas.transform.GetChild(i).GetComponent<ToggleVisibility>().toggle();
+    }
 
-            }
-        }
+    public void ResetLevel()
+    {
+        gameIsWon = false;
+        EnemiesKilled = 0;
     }
 
     // Start is called before the first frame update
