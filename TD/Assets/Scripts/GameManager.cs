@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
    
     public static GameManager Instance { get; private set; }
+    public static bool GameIsOver { get; internal set; }
 
     public GameObject Canvas;
 
