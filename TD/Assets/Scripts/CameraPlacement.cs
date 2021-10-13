@@ -13,12 +13,6 @@ public class CameraPlacement : MonoBehaviour
 
 		
 
-		if (GameManager.GameIsOver)
-		{
-			this.enabled = false;
-			return;
-		}
-
 		if (Input.GetKey("z") || Input.GetKey("up") || Input.mousePosition.y >= Screen.height - BorderThickness)
 		{
 			transform.Translate(Vector3.forward * Speed * Time.deltaTime, Space.World);
