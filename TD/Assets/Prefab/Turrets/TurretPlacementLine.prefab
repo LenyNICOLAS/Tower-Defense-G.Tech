@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &936757633617205927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5112193974778343632}
+  m_Layer: 0
+  m_Name: BulletContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5112193974778343632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936757633617205927}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1215715716993474790}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1270195990145839235
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +61,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
-  - {fileID: 6899028144351657214}
+  - {fileID: 5112193974778343632}
   m_Father: {fileID: 9070121733571648430}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62,7 +92,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 717bca9cf0462f0408ff03fa0add923f, type: 2}
+  - {fileID: 2100000, guid: 2bdb54a7059e23a4189fb9d46117f08d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,39 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652999fcd58950d4e86cf19d432222c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretPrefab: {fileID: 7006695030464100472, guid: 63dd8aef5fe37de42ba6b2ad7fdd869d, type: 3}
-  bulletContainer: {fileID: 6899028144351657214}
-  spawn: {fileID: 5255036615596298266, guid: ae840cb24fb3c844595435ea667bc137, type: 3}
---- !u!1 &2348197799113490594
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7778016972300492917}
-  m_Layer: 0
-  m_Name: BulletContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7778016972300492917
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2348197799113490594}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 8779249912697062664}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  turretPrefab: {fileID: 7006695030464100472, guid: 88b05a6f111bd614dba0106200463e37, type: 3}
+  bulletContainer: {fileID: 5112193974778343632}
 --- !u!1 &2625163110975544899
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +233,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 717bca9cf0462f0408ff03fa0add923f, type: 2}
+  - {fileID: 2100000, guid: 2bdb54a7059e23a4189fb9d46117f08d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -281,9 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652999fcd58950d4e86cf19d432222c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretPrefab: {fileID: 7006695030464100472, guid: 63dd8aef5fe37de42ba6b2ad7fdd869d, type: 3}
+  turretPrefab: {fileID: 7006695030464100472, guid: 88b05a6f111bd614dba0106200463e37, type: 3}
   bulletContainer: {fileID: 792833882621107233}
-  spawn: {fileID: 5255036615596298266, guid: ae840cb24fb3c844595435ea667bc137, type: 3}
 --- !u!1 &7250892511288858755
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +313,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
-  - {fileID: 7778016972300492917}
+  - {fileID: 428244159020208705}
   m_Father: {fileID: 9070121733571648430}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -346,7 +344,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 717bca9cf0462f0408ff03fa0add923f, type: 2}
+  - {fileID: 2100000, guid: 2bdb54a7059e23a4189fb9d46117f08d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -393,9 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652999fcd58950d4e86cf19d432222c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretPrefab: {fileID: 7006695030464100472, guid: 63dd8aef5fe37de42ba6b2ad7fdd869d, type: 3}
-  bulletContainer: {fileID: 7778016972300492917}
-  spawn: {fileID: 5255036615596298266, guid: ae840cb24fb3c844595435ea667bc137, type: 3}
+  turretPrefab: {fileID: 7006695030464100472, guid: 88b05a6f111bd614dba0106200463e37, type: 3}
+  bulletContainer: {fileID: 428244159020208705}
 --- !u!1 &7926717204541458734
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7926717204541458734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11, y: 0.2, z: -18}
+  m_LocalPosition: {x: 0.6124456, y: -0.00000047683716, z: -0.57856035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5754883892173430230}
@@ -442,8 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3101996450af6364e9e6e03891a0b334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 0}
---- !u!1 &8863370755843097214
+--- !u!1 &8686111205142525224
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,7 +447,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6899028144351657214}
+  - component: {fileID: 428244159020208705}
   m_Layer: 0
   m_Name: BulletContainer
   m_TagString: Untagged
@@ -459,17 +455,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6899028144351657214
+--- !u!4 &428244159020208705
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8863370755843097214}
+  m_GameObject: {fileID: 8686111205142525224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1215715716993474790}
+  m_Father: {fileID: 8779249912697062664}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

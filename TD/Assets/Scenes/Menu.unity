@@ -931,6 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesKilled: 0
+  EnemiesPassed: 0
 --- !u!4 &1443068623
 Transform:
   m_ObjectHideFlags: 0
