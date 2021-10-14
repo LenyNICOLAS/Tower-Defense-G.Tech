@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    private int hp = 10;
+    public int enemiesToKill = 1;
+    public int hp = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        GameManager.Instance.SetWinCondition(enemiesToKill);
+        GameManager.Instance.SetLooseCondition(hp);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
-        hp--;
+        GameManager.Instance.EnemiesPassed++;
     }
 }

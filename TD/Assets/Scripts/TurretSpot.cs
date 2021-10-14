@@ -6,7 +6,6 @@ public class TurretSpot : MonoBehaviour
 {
     public GameObject turretPrefab;
     public Transform bulletContainer;
-    public GameObject spawn;
 
     private GameObject turret;
 
@@ -32,7 +31,6 @@ public class TurretSpot : MonoBehaviour
                              Quaternion.identity) as GameObject;
 
         turret.GetComponent<Turret>().bulletContainer = bulletContainer;
-        turret.GetComponent<Turret>().spawn = spawn;
     }
 
 

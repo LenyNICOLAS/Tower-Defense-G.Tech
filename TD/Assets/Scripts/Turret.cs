@@ -6,7 +6,6 @@ public class Turret : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject canonPrefab;
-    public GameObject spawn = null;
 
 
     public Transform range;
@@ -28,16 +27,6 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (spawn != null)
-        {
-
-            if (spawn.GetComponent<Spawn>().isLaunched)
-            {
-                ColliderOn();
-            }
-
-        }
 
         float dt = Time.time - lastBulletFired;
 
@@ -62,11 +51,6 @@ public class Turret : MonoBehaviour
         }
 
 
-    }
-
-    public void ColliderOn()
-    {
-        range.localScale = new Vector3(15, 1, 15);
     }
 
 }

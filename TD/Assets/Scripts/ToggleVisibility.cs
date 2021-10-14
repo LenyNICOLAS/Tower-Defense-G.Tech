@@ -8,6 +8,7 @@ public class ToggleVisibility : MonoBehaviour
 
     CanvasGroup canvasGroup;
     private bool gameIsWon = false;
+    private bool gameIsLost = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +20,29 @@ public class ToggleVisibility : MonoBehaviour
     void Update()
     {
 
-        if(GameManager.Instance.IsGameWon() != gameIsWon)
+
+        if (tag == "Victory")
         {
-            gameIsWon = GameManager.Instance.IsGameWon();
-            if (tag != "LaunchButton")
+            if (GameManager.Instance.IsGameWon() == true && gameIsWon == false)
             {
-                toggle();
+                gameIsWon = GameManager.Instance.IsGameWon();
+                if (tag != "LaunchButton")
+                {
+                    toggle();
+                }
+            }
+        }
+
+        if (tag == "Defeat")
+        {
+            //Debug.Log($"gameManager {GameManager.Instance.IsGameLost()}, toggle {gameIsLost}");
+            if(GameManager.Instance.IsGameLost() == true && gameIsLost == false)
+            {
+                gameIsLost = GameManager.Instance.IsGameLost();
+                if (tag != "LaunchButton")
+                {
+                    toggle();
+                }
             }
         }
     }
