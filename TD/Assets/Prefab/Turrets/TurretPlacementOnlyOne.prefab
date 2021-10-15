@@ -28,7 +28,7 @@ Transform:
   m_LocalPosition: {x: -5.66, y: 0.2, z: 12.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3378741916542908562}
+  - {fileID: 367405670386225473}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3101996450af6364e9e6e03891a0b334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &3007767382206688469
+--- !u!1001 &164177023600248070
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -99,18 +99,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretSpot
       objectReference: {fileID: 0}
-    - target: {fileID: 6224913891666521619, guid: 0f219c585dc397b409e5493ab51a38d9, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2bdb54a7059e23a4189fb9d46117f08d, type: 2}
-    - target: {fileID: 8478603632467159109, guid: 0f219c585dc397b409e5493ab51a38d9, type: 3}
-      propertyPath: turretPrefab
-      value: 
-      objectReference: {fileID: 7006695030464100472, guid: 88b05a6f111bd614dba0106200463e37, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f219c585dc397b409e5493ab51a38d9, type: 3}
---- !u!4 &3378741916542908562 stripped
+--- !u!4 &367405670386225473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 530878988699866183, guid: 0f219c585dc397b409e5493ab51a38d9, type: 3}
-  m_PrefabInstance: {fileID: 3007767382206688469}
+  m_PrefabInstance: {fileID: 164177023600248070}
   m_PrefabAsset: {fileID: 0}

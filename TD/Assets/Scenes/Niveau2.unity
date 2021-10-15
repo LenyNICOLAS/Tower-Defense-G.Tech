@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -406,6 +406,10 @@ PrefabInstance:
       propertyPath: spawn
       value: 
       objectReference: {fileID: 1992694126}
+    - target: {fileID: 7684929677023206835, guid: 1ffa0899239315548bc72e847ce74479, type: 3}
+      propertyPath: crystalPrefab
+      value: 
+      objectReference: {fileID: 177813243472295509, guid: c0833f69e6ca23c44b29a25b6d4361b8, type: 3}
     - target: {fileID: 7926717204541458734, guid: 1ffa0899239315548bc72e847ce74479, type: 3}
       propertyPath: m_Name
       value: TurretPlacementLine (1)
@@ -1508,10 +1512,6 @@ PrefabInstance:
       propertyPath: goal
       value: 
       objectReference: {fileID: 652711779}
-    - target: {fileID: 4851650485658553132, guid: ae840cb24fb3c844595435ea667bc137, type: 3}
-      propertyPath: EnemyPrefab
-      value: 
-      objectReference: {fileID: 236871430754811, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
     - target: {fileID: 5255036615596298266, guid: ae840cb24fb3c844595435ea667bc137, type: 3}
       propertyPath: m_Name
       value: Spawn
@@ -3849,7 +3849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637230373575104295, guid: 4154451ea20495d4db9b42ac106fac0b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4154451ea20495d4db9b42ac106fac0b, type: 3}
