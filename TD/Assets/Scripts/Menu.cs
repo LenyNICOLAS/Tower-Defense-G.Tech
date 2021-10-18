@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
         back = false;
 
         a = transform.position;
-        b = new Vector3(-1280, 720, 0);
+        b = new Vector3(-a.x, a.y, a.z);
 
 
     }
