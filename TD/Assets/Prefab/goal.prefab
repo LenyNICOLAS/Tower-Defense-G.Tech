@@ -108,3 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b269c099f05b8a41b6657dc7655af28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesToKill: 10
+  hp: 10

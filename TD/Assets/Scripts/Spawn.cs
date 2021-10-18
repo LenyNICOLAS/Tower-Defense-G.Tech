@@ -8,22 +8,60 @@ public class Spawn : MonoBehaviour
 
     public Transform goal;
     public GameObject EnemyPrefab;
+    public GameObject SmallEnemyPrefab;
 
-    public bool isLaunched = false;
+    public int numberOfEnemies = 1;
+    public int numberOfSmallEnemies = 1;
+
+    private int enemiesSpawned = 0;
+    private int smallEnemiesSpawned = 0;
+
+    private bool isLaunched = false;
+    private bool enemyInSpawn = false;
 
 
-    public void Launch()
+    // Start is called before the first frame update
+    void Start()
     {
 
-        isLaunched = true;
+    }
 
-        for(int i=0; i<10; ++i)
+    // Update is called once per frame
+    void Update()
+    {
+
+        if(isLaunched && !enemyInSpawn && enemiesSpawned < numberOfEnemies)
         {
             GameObject enemy = Instantiate(EnemyPrefab, transform.position, Quaternion.identity) as GameObject;
 
             enemy.GetComponent<GoToGoal>().goal = goal;
             enemy.GetComponent<GoToGoal>().spawn = transform;
 
+            enemiesSpawned++;
+
+            enemyInSpawn = true;
         }
+
+        if(isLaunched && !enemyInSpawn && smallEnemiesSpawned < numberOfSmallEnemies)
+        {
+            GameObject enemy = Instantiate(SmallEnemyPrefab, transform.position, Quaternion.identity) as GameObject;
+
+            enemy.GetComponent<GoToGoal>().goal = goal;
+            enemy.GetComponent<GoToGoal>().spawn = transform;
+
+            smallEnemiesSpawned++;
+
+            enemyInSpawn = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        enemyInSpawn = false;
+    }
+
+    public void Launch()
+    {
+        isLaunched = true;
     }
 }

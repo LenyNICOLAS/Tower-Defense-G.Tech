@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class TurretSpot : MonoBehaviour
 {
+    public GameObject crystalPrefab;
     public GameObject turretPrefab;
     public Transform bulletContainer;
 
     private GameObject turret;
+    private GameObject crystal;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +26,24 @@ public class TurretSpot : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Destroy(turret);
 
-        turret = Instantiate(turretPrefab,
-                             transform.position + new Vector3(0, 2, 0),
+        Destroy(crystal);
+
+        crystal = Instantiate(crystalPrefab,
+                             transform.position + new Vector3(0, 1, 0),
                              Quaternion.identity) as GameObject;
 
-        turret.GetComponent<Turret>().bulletContainer = bulletContainer;
+        crystal.GetComponent<Turret>().bulletContainer = bulletContainer;
+
+
+        
+
+        turret = Instantiate(turretPrefab,
+                             transform.position + new Vector3(0, 1, 0),
+                             Quaternion.identity) as GameObject;
+
+        
+                       
     }
 
 
