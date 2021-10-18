@@ -1258,7 +1258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622226610654758820, guid: ae840cb24fb3c844595435ea667bc137, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4622226610654758820, guid: ae840cb24fb3c844595435ea667bc137, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1399,7 +1399,7 @@ Transform:
   m_LocalScale: {x: 7.0595403, y: 0.7059541, z: 6.6392155}
   m_Children: []
   m_Father: {fileID: 1066880465}
-  m_RootOrder: 24
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1051891870
 PrefabInstance:
@@ -1518,11 +1518,11 @@ Transform:
   - {fileID: 648091578}
   - {fileID: 313852780}
   - {fileID: 6428623226735160190}
+  - {fileID: 915805052}
   - {fileID: 4070303548005394184}
   - {fileID: 2016552395}
   - {fileID: 868542630}
   - {fileID: 2140655009}
-  - {fileID: 915805052}
   - {fileID: 2095918714}
   - {fileID: 2117427826}
   - {fileID: 1583554146}
@@ -1729,6 +1729,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479162019}
     m_Modifications:
+    - target: {fileID: 505029056948766156, guid: 1ffa0899239315548bc72e847ce74479, type: 3}
+      propertyPath: turretPrefab
+      value: 
+      objectReference: {fileID: 177813243472295509, guid: c0833f69e6ca23c44b29a25b6d4361b8, type: 3}
+    - target: {fileID: 505029056948766156, guid: 1ffa0899239315548bc72e847ce74479, type: 3}
+      propertyPath: crystalPrefab
+      value: 
+      objectReference: {fileID: 7006695030464100472, guid: 88b05a6f111bd614dba0106200463e37, type: 3}
     - target: {fileID: 5561235987128431745, guid: 1ffa0899239315548bc72e847ce74479, type: 3}
       propertyPath: spawn
       value: 
@@ -1826,7 +1834,7 @@ Transform:
   - {fileID: 3007767382767117204}
   - {fileID: 1500100577}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1490680899
 PrefabInstance:
@@ -3338,7 +3346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637230373575104295, guid: 4154451ea20495d4db9b42ac106fac0b, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4154451ea20495d4db9b42ac106fac0b, type: 3}
