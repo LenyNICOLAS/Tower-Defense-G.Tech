@@ -35,7 +35,6 @@ public class ToggleVisibility : MonoBehaviour
 
         if (tag == "Defeat")
         {
-            //Debug.Log($"gameManager {GameManager.Instance.IsGameLost()}, toggle {gameIsLost}");
             if(GameManager.Instance.IsGameLost() == true && gameIsLost == false)
             {
                 gameIsLost = GameManager.Instance.IsGameLost();

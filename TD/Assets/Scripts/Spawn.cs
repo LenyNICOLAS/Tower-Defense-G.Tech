@@ -28,6 +28,10 @@ public class Spawn : MonoBehaviour
     {
         wave = 0;
         maxWave = WaveContainer.transform.childCount;
+
+        GameManager.Instance.SetWave(wave + 1);
+        GameManager.Instance.SetMaxWave(maxWave);
+
         lastWaveSpawned = Time.time;
 
         SetNextWave(0);
@@ -36,7 +40,7 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance.IsGameWon())
+        if (GameManager.Instance.IsGameAlive())
         {
             if (waveFinished)
             {
@@ -126,7 +130,9 @@ public class Spawn : MonoBehaviour
             waveFinished = true;
             lastWaveSpawned = Time.time;
             totalEnemiesSpawned += enemiesSpawned + smallEnemiesSpawned;
+
             wave++;
+            GameManager.Instance.SetWave(wave + 1);
         }
     }
 

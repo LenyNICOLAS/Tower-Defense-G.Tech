@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public int EnemiesKilled = 0;
     public int EnemiesPassed = 0;
 
+    private int wave, maxWave;
+
     private int looseCondition = int.MaxValue;
 
     private bool gameIsWon = false;
@@ -68,6 +70,11 @@ public class GameManager : MonoBehaviour
         gameIsLost = true;
     }
 
+    public bool IsGameAlive()
+    {
+        return !IsGameWon() && !IsGameLost();
+    }
+
     public void ResetLevel()
     {
         gameIsWon = false;
@@ -76,6 +83,26 @@ public class GameManager : MonoBehaviour
         EnemiesKilled = 0;
         EnemiesPassed = 0;
 
+    }
+
+    public int GetWave()
+    {
+        return wave;
+    }
+
+    public void SetWave(int _wave)
+    {
+        wave = _wave;
+    }
+
+    public int GetMaxWave()
+    {
+        return maxWave;
+    }
+
+    public void SetMaxWave(int _maxWave)
+    {
+        maxWave = _maxWave;
     }
 
 }
