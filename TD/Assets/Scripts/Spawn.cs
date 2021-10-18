@@ -9,49 +9,69 @@ public class Spawn : MonoBehaviour
     public Transform goal;
     public GameObject EnemyPrefab;
     public GameObject SmallEnemyPrefab;
-
-    public int numberOfEnemies = 1;
-    public int numberOfSmallEnemies = 1;
+    public GameObject WaveContainer;
 
     private int enemiesSpawned = 0;
     private int smallEnemiesSpawned = 0;
+    private int totalEnemiesSpawned = 0;
 
-    private bool isLaunched = false;
     private bool enemyInSpawn = false;
+    private bool isLaunched, waveFinished;
+
+    private bool shuffle;
+    private int wave, maxWave, enemies, smallEnemies;
+    private float timeBeforeNextWave, lastWaveSpawned;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        wave = 0;
+        maxWave = WaveContainer.transform.childCount;
+        lastWaveSpawned = Time.time;
 
+        SetNextWave(0);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if(isLaunched && !enemyInSpawn && enemiesSpawned < numberOfEnemies)
+        if (!GameManager.Instance.IsGameWon())
         {
-            GameObject enemy = Instantiate(EnemyPrefab, transform.position, Quaternion.identity) as GameObject;
+            if (waveFinished)
+            {
+                if (wave < maxWave)
+                {
+                    SetNextWave(wave);
+                    Debug.Log($"next wave : {wave + 1}/{maxWave}");
+                }
+                else
+                {
+                    bool winCondition = totalEnemiesSpawned == GameManager.Instance.EnemiesKilled + GameManager.Instance.EnemiesPassed;
+                    if (winCondition)
+                    {
+                        GameManager.Instance.GameWon();
+                    }
+                }
 
-            enemy.GetComponent<GoToGoal>().goal = goal;
-            enemy.GetComponent<GoToGoal>().spawn = transform;
-
-            enemiesSpawned++;
-
-            enemyInSpawn = true;
-        }
-
-        if(isLaunched && !enemyInSpawn && smallEnemiesSpawned < numberOfSmallEnemies)
-        {
-            GameObject enemy = Instantiate(SmallEnemyPrefab, transform.position, Quaternion.identity) as GameObject;
-
-            enemy.GetComponent<GoToGoal>().goal = goal;
-            enemy.GetComponent<GoToGoal>().spawn = transform;
-
-            smallEnemiesSpawned++;
-
-            enemyInSpawn = true;
+            }
+            else
+            {
+                if (!enemyInSpawn)
+                {
+                    if (wave == 0)
+                    {
+                        if (isLaunched) ChooseEnemy();
+                    }
+                    else
+                    {
+                        if (isLaunched || Time.time - lastWaveSpawned > timeBeforeNextWave)
+                        {
+                            ChooseEnemy();
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -62,6 +82,76 @@ public class Spawn : MonoBehaviour
 
     public void Launch()
     {
-        isLaunched = true;
+        if (isLaunched)
+        {
+
+        }
+        else
+        {
+            isLaunched = true;
+
+        }
     }
+
+    public void ChooseEnemy()
+    {
+        Debug.Log($"{enemiesSpawned}/{enemies}   {smallEnemiesSpawned}/{smallEnemies}");
+        if (enemiesSpawned < enemies && smallEnemiesSpawned < smallEnemies)
+        {
+            int queue = shuffle ? Random.Range(0, 2) : 0;
+            if (queue == 0)
+            {
+                SpawnEnemy(EnemyPrefab);
+                enemiesSpawned++;
+            }
+            if (queue == 1)
+            {
+                SpawnEnemy(SmallEnemyPrefab);
+                smallEnemiesSpawned++;
+            }
+        }
+        else if (enemiesSpawned < enemies)
+        {
+            SpawnEnemy(EnemyPrefab);
+            enemiesSpawned++;
+
+        }
+        else if (smallEnemiesSpawned < smallEnemies)
+        {
+            SpawnEnemy(SmallEnemyPrefab);
+            smallEnemiesSpawned++;
+        }
+        else
+        {
+            waveFinished = true;
+            lastWaveSpawned = Time.time;
+            totalEnemiesSpawned += enemiesSpawned + smallEnemiesSpawned;
+            wave++;
+        }
+    }
+
+    public void SpawnEnemy(GameObject prefab)
+    {
+        GameObject enemy = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
+
+        enemy.GetComponent<GoToGoal>().goal = goal;
+        enemy.GetComponent<GoToGoal>().spawn = transform;
+
+        enemyInSpawn = true;
+    }
+
+    public void SetNextWave(int i)
+    {
+        enemies = WaveContainer.transform.GetChild(i).GetComponent<Wave>().enemies;
+        smallEnemies = WaveContainer.transform.GetChild(i).GetComponent<Wave>().smallEnemies;
+        timeBeforeNextWave = WaveContainer.transform.GetChild(i).GetComponent<Wave>().timeBeforeNextWave;
+        shuffle = WaveContainer.transform.GetChild(i).GetComponent<Wave>().shuffle;
+
+        isLaunched = false;
+        waveFinished = false;
+
+        enemiesSpawned = 0;
+        smallEnemiesSpawned = 0;
+    }
+
 }

@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public int EnemiesKilled = 0;
     public int EnemiesPassed = 0;
 
-    private int winCondition = int.MaxValue;
     private int looseCondition = int.MaxValue;
 
     private bool gameIsWon = false;
@@ -38,19 +37,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameIsWon && EnemiesKilled > winCondition - 1)
-        {
-            GameWon();
-        }
         if (!gameIsLost && EnemiesPassed > looseCondition - 1)
         {
             GameLost();
         }
-    }
-
-    public void SetWinCondition(int wc)
-    {
-        winCondition = wc;
     }
 
     public void SetLooseCondition(int lc)
@@ -82,7 +72,6 @@ public class GameManager : MonoBehaviour
     {
         gameIsWon = false;
         gameIsLost = false;
-        winCondition = int.MaxValue;
         looseCondition = int.MaxValue;
         EnemiesKilled = 0;
         EnemiesPassed = 0;

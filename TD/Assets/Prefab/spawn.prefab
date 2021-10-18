@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4622226610654758841}
   - component: {fileID: 7110665050088621550}
   m_Layer: 0
-  m_Name: Spawn
+  m_Name: spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,4 +111,4 @@ MonoBehaviour:
   goal: {fileID: 712097952272937810, guid: 1f8e83a3fee8c6641bfb17027cbfc3db, type: 3}
   EnemyPrefab: {fileID: 236871430754811, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
   SmallEnemyPrefab: {fileID: 4706676548621324396, guid: 3bc06964f4636914fa05fc03969fea70, type: 3}
-  isLaunched: 0
+  WaveContainer: {fileID: 8274877125132641399, guid: 7844e5d27b99a1a4ea9eeaedc442ef4b, type: 3}

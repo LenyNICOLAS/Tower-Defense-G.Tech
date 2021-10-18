@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    public int enemiesToKill = 1;
     public int hp = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.SetWinCondition(enemiesToKill);
         GameManager.Instance.SetLooseCondition(hp);
     }
 
