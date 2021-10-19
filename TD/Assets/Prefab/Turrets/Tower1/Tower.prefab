@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &9195624654819529278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613076257140202935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00201a3c8d259ad488d14844fa816c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7785086217350215736
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,8 +678,65 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasTower
       objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7429438186824889666}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 9195624654819529278}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMouseDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnMouseDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TowerConfig, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TowerConfig, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081968257432662803, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+--- !u!1 &6613076257140202935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6497304613886151694, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
+  m_PrefabInstance: {fileID: 138852711739789753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5953250138387039458 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6013287073069618523, guid: 10fbaf89d81680f47b1208cd2a0a14c0, type: 3}
