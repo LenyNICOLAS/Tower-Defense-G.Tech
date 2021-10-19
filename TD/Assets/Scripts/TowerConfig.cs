@@ -7,17 +7,15 @@ using UnityEngine.UI;
 
 public class TowerConfig : MonoBehaviour
 {
+    CanvasGroup canvasGroup;
+    
 
-    public Canvas CanvasTower;
-
-
-    private Canvas Canvas;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        canvasGroup = transform.GetChild(0).GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
@@ -31,12 +29,14 @@ public class TowerConfig : MonoBehaviour
     {
 
         Debug.Log("CanvasTower");
+        
+        canvasGroup.alpha = canvasGroup.alpha == 0 ? 1 : 0;
+        canvasGroup.interactable = !canvasGroup.interactable;
+        canvasGroup.blocksRaycasts = !canvasGroup.blocksRaycasts;
 
 
-        Canvas = Instantiate(CanvasTower) as Canvas;
 
-
-
+        
 
 
     }

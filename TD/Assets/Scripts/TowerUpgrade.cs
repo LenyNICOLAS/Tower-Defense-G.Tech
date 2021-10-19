@@ -21,11 +21,13 @@ public class TowerUpgrade : MonoBehaviour
 
 
         //turret = Instantiate(turretPrefab);
-        /*
-        turret = Instantiate(turretPrefab, Quaternion.identity,
+
+        turret = Instantiate(turretPrefab,
+                             transform.position + new Vector3(0, 1, 0),
+                             Quaternion.identity,
                              transform) as GameObject;
-        */
-        
+
+
     }
 
 

@@ -457,7 +457,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7965756046830969835, guid: 0f219c585dc397b409e5493ab51a38d9, type: 3}
+      - m_Target: {fileID: 2769275348459753761, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
         m_TargetAssemblyTypeName: TowerUpgrade, Assembly-CSharp
         m_MethodName: btn_amelioration
         m_Mode: 1
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &8280706366750157861
 MonoBehaviour:
   m_ObjectHideFlags: 0
