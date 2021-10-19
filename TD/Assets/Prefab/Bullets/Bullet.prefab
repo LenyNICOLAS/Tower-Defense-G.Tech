@@ -119,9 +119,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2856118186354244579}
     m_Modifications:
+    - target: {fileID: 6114965180751660060, guid: 8e79edadc7aaccb4981f801c2307cb94, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6114965180770936028, guid: 8e79edadc7aaccb4981f801c2307cb94, type: 3}
       propertyPath: m_Name
       value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114965180770936028, guid: 8e79edadc7aaccb4981f801c2307cb94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6114965180770973948, guid: 8e79edadc7aaccb4981f801c2307cb94, type: 3}
       propertyPath: m_RootOrder

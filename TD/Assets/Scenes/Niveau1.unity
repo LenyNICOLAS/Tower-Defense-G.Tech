@@ -760,6 +760,10 @@ PrefabInstance:
       propertyPath: smallEnemies
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6679516389219352804, guid: 4dbfcda218897b04ea1f769e271e672f, type: 3}
+      propertyPath: timeBeforeThisWave
+      value: 100000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dbfcda218897b04ea1f769e271e672f, type: 3}
 --- !u!1001 &467018831
@@ -1416,7 +1420,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6679516389219352804, guid: 4dbfcda218897b04ea1f769e271e672f, type: 3}
       propertyPath: enemies
-      value: 10
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679516389219352804, guid: 4dbfcda218897b04ea1f769e271e672f, type: 3}
+      propertyPath: timeBeforeNextWave
+      value: 100000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dbfcda218897b04ea1f769e271e672f, type: 3}

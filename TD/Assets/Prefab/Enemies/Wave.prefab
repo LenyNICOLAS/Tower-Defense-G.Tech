@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies: 0
   smallEnemies: 0
-  timeBeforeNextWave: 5
+  timeBeforeThisWave: 15
   shuffle: 0

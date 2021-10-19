@@ -20,7 +20,7 @@ public class Spawn : MonoBehaviour
 
     private bool shuffle;
     private int wave, maxWave, enemies, smallEnemies;
-    private float timeBeforeNextWave, lastWaveSpawned;
+    private float timeBeforeThisWave, lastWaveSpawned;
 
 
     // Start is called before the first frame update
@@ -69,7 +69,7 @@ public class Spawn : MonoBehaviour
                     }
                     else
                     {
-                        if (isLaunched || Time.time - lastWaveSpawned > timeBeforeNextWave)
+                        if (isLaunched || Time.time - lastWaveSpawned > timeBeforeThisWave)
                         {
                             ChooseEnemy();
                         }
@@ -150,7 +150,7 @@ public class Spawn : MonoBehaviour
     {
         enemies = WaveContainer.transform.GetChild(i).GetComponent<Wave>().enemies;
         smallEnemies = WaveContainer.transform.GetChild(i).GetComponent<Wave>().smallEnemies;
-        timeBeforeNextWave = WaveContainer.transform.GetChild(i).GetComponent<Wave>().timeBeforeNextWave;
+        timeBeforeThisWave = WaveContainer.transform.GetChild(i).GetComponent<Wave>().timeBeforeThisWave;
         shuffle = WaveContainer.transform.GetChild(i).GetComponent<Wave>().shuffle;
 
         isLaunched = false;
