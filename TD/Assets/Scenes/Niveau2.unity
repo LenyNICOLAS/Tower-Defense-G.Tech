@@ -2006,7 +2006,7 @@ PrefabInstance:
     - target: {fileID: 4879332304582819683, guid: 1ffa0899239315548bc72e847ce74479, type: 3}
       propertyPath: turretPrefab
       value: 
-      objectReference: {fileID: 177813243472295509, guid: c0833f69e6ca23c44b29a25b6d4361b8, type: 3}
+      objectReference: {fileID: 8659239935140198479, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
     - target: {fileID: 4879332304582819683, guid: 1ffa0899239315548bc72e847ce74479, type: 3}
       propertyPath: crystalPrefab
       value: 
