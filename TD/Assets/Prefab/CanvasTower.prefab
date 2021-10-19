@@ -457,7 +457,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2769275348459753761, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
+      - m_Target: {fileID: 7965756046830969835, guid: 0f219c585dc397b409e5493ab51a38d9, type: 3}
         m_TargetAssemblyTypeName: TowerUpgrade, Assembly-CSharp
         m_MethodName: btn_amelioration
         m_Mode: 1
@@ -589,19 +589,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7301794968320230910}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: btn_change_scene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Menu
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &3211155291696582866
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +870,7 @@ GameObject:
   - component: {fileID: 3488601911252810315}
   - component: {fileID: 4226283051189482889}
   - component: {fileID: 8280706366750157861}
+  - component: {fileID: 4427532308606282573}
   m_Layer: 5
   m_Name: CanvasTower
   m_TagString: Untagged
@@ -952,7 +941,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8280706366750157861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,6 +959,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &4427532308606282573
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6497304613886151694}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &7211053078151442008
 GameObject:
   m_ObjectHideFlags: 0

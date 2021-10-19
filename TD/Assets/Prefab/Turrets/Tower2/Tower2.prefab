@@ -349,7 +349,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5571616020260607987}
   - component: {fileID: 9118331433284686698}
-  - component: {fileID: 2769275348459753761}
   m_Layer: 0
   m_Name: Tower2
   m_TagString: Untagged
@@ -396,19 +395,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2769275348459753761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5051222305656671561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76cb356fc327e9a428a5f9bf4d98437a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretPrefab: {fileID: 5051222305656671561}
 --- !u!1 &5410222196136316135
 GameObject:
   m_ObjectHideFlags: 0
