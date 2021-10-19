@@ -30,7 +30,7 @@ public class TowerConfig : MonoBehaviour
     public void OnMouseDown()
     {
 
-
+        Debug.Log("CanvasTower");
 
 
         Canvas = Instantiate(CanvasTower) as Canvas;
