@@ -31,7 +31,8 @@ public class TurretSpot : MonoBehaviour
 
         crystal = Instantiate(crystalPrefab,
                              transform.position + new Vector3(0, 1, 0),
-                             Quaternion.identity) as GameObject;
+                             Quaternion.identity,
+                             transform) as GameObject;
 
         crystal.GetComponent<Turret>().bulletContainer = bulletContainer;
 
@@ -40,7 +41,8 @@ public class TurretSpot : MonoBehaviour
 
         turret = Instantiate(turretPrefab,
                              transform.position + new Vector3(0, 1, 0),
-                             Quaternion.identity) as GameObject;
+                             Quaternion.identity,
+                             transform) as GameObject;
 
         
                        

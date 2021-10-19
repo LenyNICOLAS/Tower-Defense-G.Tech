@@ -69,7 +69,7 @@ MonoBehaviour:
   range: {fileID: 2808704138864871262}
   bulletContainer: {fileID: 0}
   target: {fileID: 0}
-  cadence: 3
+  cadence: 1.5
   rotationSpeed: 5
 --- !u!1 &7844332901000229126
 GameObject:
