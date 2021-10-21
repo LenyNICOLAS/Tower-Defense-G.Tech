@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class TurretSpot : MonoBehaviour
 {
-    
+    public GameObject crystalPrefab;
     public GameObject turretPrefab;
     public Transform bulletContainer;
     public RectTransform TurretChoice;
     public Vector3 offset;
 
     private GameObject turret;
-    
+    private GameObject crystal;
 
     public static explicit operator TurretSpot(GameObject v)
     {
@@ -34,33 +34,51 @@ public class TurretSpot : MonoBehaviour
 
     public void OnMouseDown()
     {
-
-        TurretChoice.GetComponentInParent<ToggleVisibility>().toggle();
-        Vector3 pos = Input.mousePosition + offset;
-        pos.z = TurretChoice.position.z;
-        TurretChoice.position = pos;
-
-
-        turret = Instantiate(turretPrefab,
-                            transform.position + new Vector3(0, 1, 0),
-                            Quaternion.identity,
-                            transform) as GameObject;
-
-
-        if (turret.CompareTag("Turret"))
+        if (GameManager.Instance.UIElementOn)
         {
-            turret.GetComponentInChildren<Turret>().bulletContainer = bulletContainer;
-            turret.GetComponentInChildren<Turret_VFX>().Pop();
+            GameManager.Instance.UIElement.GetComponent<ToggleVisibility>().toggle();
+            GameManager.Instance.UIElementOn = false;
         }
-        else if (turret.CompareTag("Slow"))
+        else
         {
-            turret.GetComponentInChildren<SlowerTurret_VFX>().Pop();
-        }
+
+            TurretChoice.GetComponentInParent<ToggleVisibility>().toggle();
+            Vector3 pos = Input.mousePosition + offset;
+            pos.z = TurretChoice.position.z;
+            TurretChoice.position = pos;
 
 
 
-       
+            Destroy(crystal);
+
+            crystal = Instantiate(crystalPrefab,
+                                 transform.position + new Vector3(0, 1, 0),
+                                 Quaternion.identity,
+                                 transform) as GameObject;
+
+            if (crystal.CompareTag("Turret"))
+            {
+                crystal.GetComponent<Turret>().bulletContainer = bulletContainer;
+                crystal.GetComponent<Turret_VFX>().Pop();
+            }
+            else if (crystal.CompareTag("Slow"))
+            {
+                crystal.GetComponent<SlowerTurret_VFX>().Pop();
+            }
+
+
+
+            turret = Instantiate(turretPrefab,
+                                 transform.position + new Vector3(0, 1, 0),
+                                 Quaternion.identity,
+                                 transform) as GameObject;
+
         
+            
+
+            GameManager.Instance.UIElementOn = true;
+            GameManager.Instance.UIElement = TurretChoice;
+        }
                        
     }
 
