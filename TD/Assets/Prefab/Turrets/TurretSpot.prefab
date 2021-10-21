@@ -111,8 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652999fcd58950d4e86cf19d432222c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystalPrefab: {fileID: 7006695030464100472, guid: 88b05a6f111bd614dba0106200463e37, type: 3}
-  turretPrefab: {fileID: 8659239935140198479, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
+  TurretPrefab: {fileID: 8659239935140198479, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
+  SlowerPrefab: {fileID: 5051222305656671561, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
   bulletContainer: {fileID: 8460983701478454705}
   TurretChoice: {fileID: 1945793521191662874}
   offset: {x: 10, y: -10, z: 0}
@@ -166,6 +166,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 530878988699866183}
     m_Modifications:
+    - target: {fileID: 3212615073459143612, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073459143612, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073459143612, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8478603632467159109}
+    - target: {fileID: 3212615073459143612, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073459143612, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: BuildTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073459143612, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TurretSpot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073459143612, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3212615073589875934, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -297,6 +325,34 @@ PrefabInstance:
     - target: {fileID: 3212615073683179019, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073787579056, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073787579056, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073787579056, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8478603632467159109}
+    - target: {fileID: 3212615073787579056, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073787579056, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: BuildSlower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073787579056, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TurretSpot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073787579056, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}

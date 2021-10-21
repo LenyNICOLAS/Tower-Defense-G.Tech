@@ -27,7 +27,7 @@ public class SlowerTurret_VFX : MonoBehaviour
 
     public void Cast()
     {
-        Vector3 height = new Vector3(0, 6, 0);
+        Vector3 height = new Vector3(0, 7, 0);
         GameObject VFX = Instantiate(SlowerTurretCast, transform.position + height, Quaternion.identity) as GameObject;
         VFX.GetComponentInChildren<ParticleSystem>().Play();
     }
