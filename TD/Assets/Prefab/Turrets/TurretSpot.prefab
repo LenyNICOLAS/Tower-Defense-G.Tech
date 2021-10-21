@@ -190,6 +190,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 944
       objectReference: {fileID: 0}
+    - target: {fileID: 3212615073589875934, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.19243231
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073589875934, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15194401
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073589875934, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.15194401
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073589875934, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212615073589875934, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3212615073683179015, guid: 99a98b2078b703c4aac90787c9fbf541, type: 3}
       propertyPath: m_Name
       value: TurretChoice
