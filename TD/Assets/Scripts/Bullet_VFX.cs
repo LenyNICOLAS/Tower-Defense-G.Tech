@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet_VFX : MonoBehaviour
 {
     public GameObject SpellHit;
+    public Vector3 pos;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Bullet_VFX : MonoBehaviour
 
     public void Hit()
     {
-        GameObject _VFX = Instantiate(SpellHit, transform.position, Quaternion.identity) as GameObject;
+        GameObject _VFX = Instantiate(SpellHit, pos, Quaternion.identity) as GameObject;
         _VFX.GetComponentInChildren<ParticleSystem>().Play();
     }
 
