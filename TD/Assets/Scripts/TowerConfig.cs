@@ -27,14 +27,23 @@ public class TowerConfig : MonoBehaviour
 
     public void OnMouseDown()
     {
-
-        Debug.Log("CanvasTower");
+        if (GameManager.Instance.UIElementOn)
+        {
+            GameManager.Instance.UIElement.GetComponent<ToggleVisibility>().toggle();
+            GameManager.Instance.UIElementOn = false;
+        }
+        else
+        {
+            
+            Debug.Log("CanvasTower");
         
-        canvasGroup.alpha = canvasGroup.alpha == 0 ? 1 : 0;
-        canvasGroup.interactable = !canvasGroup.interactable;
-        canvasGroup.blocksRaycasts = !canvasGroup.blocksRaycasts;
-
-
+            canvasGroup.alpha = canvasGroup.alpha == 0 ? 1 : 0;
+            canvasGroup.interactable = !canvasGroup.interactable;
+            canvasGroup.blocksRaycasts = !canvasGroup.blocksRaycasts;
+            
+            GameManager.Instance.UIElementOn = true;
+            GameManager.Instance.UIElement = canvasGroup.GetComponentInParent<RectTransform>();
+        }
 
         
 

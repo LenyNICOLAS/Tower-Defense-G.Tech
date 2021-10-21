@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public int EnemiesKilled = 0;
     public int EnemiesPassed = 0;
 
+    public bool UIElementOn = false;
+    public RectTransform UIElement;
+
     private int wave, maxWave;
 
     private int looseCondition = int.MaxValue;
@@ -19,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance != null)
+        if (Instance != null)
         {
             Destroy(gameObject);
         }
@@ -42,6 +45,14 @@ public class GameManager : MonoBehaviour
         if (!gameIsLost && EnemiesPassed > looseCondition - 1)
         {
             GameLost();
+        }
+        if (UIElementOn)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                UIElement.GetComponent<ToggleVisibility>().toggle();
+                GameManager.Instance.UIElementOn = false;
+            }
         }
     }
 
@@ -82,7 +93,8 @@ public class GameManager : MonoBehaviour
         looseCondition = int.MaxValue;
         EnemiesKilled = 0;
         EnemiesPassed = 0;
-
+        UIElementOn = false;
+        UIElement = null;
     }
 
     public int GetWave()

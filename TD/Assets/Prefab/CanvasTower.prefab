@@ -871,6 +871,7 @@ GameObject:
   - component: {fileID: 4226283051189482889}
   - component: {fileID: 8280706366750157861}
   - component: {fileID: 4427532308606282573}
+  - component: {fileID: 7936761610151397412}
   m_Layer: 5
   m_Name: CanvasTower
   m_TagString: Untagged
@@ -971,6 +972,18 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &7936761610151397412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6497304613886151694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0eb26f7b4bec26448f2b748c05fdc41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7211053078151442008
 GameObject:
   m_ObjectHideFlags: 0

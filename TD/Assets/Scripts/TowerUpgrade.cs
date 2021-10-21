@@ -17,7 +17,7 @@ public class TowerUpgrade : MonoBehaviour
        
        
 
-            Debug.Log("Amélioration");
+        Debug.Log("Amélioration");
 
 
         //turret = Instantiate(turretPrefab);

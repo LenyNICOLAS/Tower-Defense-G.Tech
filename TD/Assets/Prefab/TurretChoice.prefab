@@ -273,7 +273,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1065061249115724927}
+      - m_Target: {fileID: 474175704888371720}
         m_TargetAssemblyTypeName: ToggleVisibility, Assembly-CSharp
         m_MethodName: toggle
         m_Mode: 1
@@ -296,6 +296,8 @@ GameObject:
   - component: {fileID: 3212615073589875934}
   - component: {fileID: 3212615073589875936}
   - component: {fileID: 3212615073589875937}
+  - component: {fileID: 1860931518402366932}
+  - component: {fileID: 474175704888371720}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -362,6 +364,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &1860931518402366932
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212615073589875935}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &474175704888371720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212615073589875935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0eb26f7b4bec26448f2b748c05fdc41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3212615073683179015
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,8 +400,6 @@ GameObject:
   - component: {fileID: 3212615073683179016}
   - component: {fileID: 3212615073683179017}
   - component: {fileID: 3212615073683179014}
-  - component: {fileID: 1186472125555087352}
-  - component: {fileID: 1065061249115724927}
   m_Layer: 5
   m_Name: TurretChoice
   m_TagString: Untagged
@@ -464,30 +488,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!225 &1186472125555087352
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3212615073683179015}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
---- !u!114 &1065061249115724927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3212615073683179015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0eb26f7b4bec26448f2b748c05fdc41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3212615073712109946
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1065061249115724927}
+      - m_Target: {fileID: 474175704888371720}
         m_TargetAssemblyTypeName: ToggleVisibility, Assembly-CSharp
         m_MethodName: toggle
         m_Mode: 1
