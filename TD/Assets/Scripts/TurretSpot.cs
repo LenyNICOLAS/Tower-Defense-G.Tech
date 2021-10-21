@@ -40,10 +40,17 @@ public class TurretSpot : MonoBehaviour
                              Quaternion.identity,
                              transform) as GameObject;
 
-        crystal.GetComponent<Turret>().bulletContainer = bulletContainer;
+        if (crystal.CompareTag("Turret"))
+        {
+            crystal.GetComponent<Turret>().bulletContainer = bulletContainer;
+            crystal.GetComponent<Turret_VFX>().Pop();
+        }
+        else if (crystal.CompareTag("Slow"))
+        {
+            crystal.GetComponent<SlowerTurret_VFX>().Pop();
+        }
 
 
-        
 
         turret = Instantiate(turretPrefab,
                              transform.position + new Vector3(0, 1, 0),

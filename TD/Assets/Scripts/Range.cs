@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Range : MonoBehaviour
 {
-    public Turret turret;
+    public GameObject turret;
 
     // Start is called before the first frame update
     void Start()
@@ -18,28 +18,19 @@ public class Range : MonoBehaviour
         
     }
 
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("enemy detected");
-        turret.target = other.transform;
-    }
-    */
-
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log("enemy detected");
-        if (!other.CompareTag("Turret"))
+        if (other.CompareTag("Enemy"))
         {
-            turret.target = other.transform;
-
+            turret.GetComponent<Turret>().target = other.transform;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         //Debug.Log("enemy out of range");
-        turret.target = null;
+        turret.GetComponent<Turret>().target = null;
     }
 
 }

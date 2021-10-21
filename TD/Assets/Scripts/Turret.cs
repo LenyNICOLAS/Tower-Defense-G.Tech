@@ -17,10 +17,10 @@ public class Turret : MonoBehaviour
 
     private float lastBulletFired = -0.5f;
 
+
     // Start is called before the first frame update
     void Start()
     {
-
 
     }
 
@@ -44,13 +44,13 @@ public class Turret : MonoBehaviour
 
                 bulletPrefab.GetComponent<Bullet>().target = target;
                 lastBulletFired = Time.time;
+
+                transform.GetComponent<Turret_SFX>().Cast();
             }
 
             Debug.DrawRay(firePosition, newDirection*3, Color.red);
             transform.rotation = Quaternion.LookRotation(newDirection);
         }
-
-
     }
 
 }

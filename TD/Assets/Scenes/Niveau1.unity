@@ -2553,6 +2553,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretPlacement
       objectReference: {fileID: 0}
+    - target: {fileID: 3191075343242225080, guid: 95243a8f450e09c4f8d4ce26573417bc, type: 3}
+      propertyPath: turretPrefab
+      value: 
+      objectReference: {fileID: 5051222305656671561, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
+    - target: {fileID: 3191075343242225080, guid: 95243a8f450e09c4f8d4ce26573417bc, type: 3}
+      propertyPath: crystalPrefab
+      value: 
+      objectReference: {fileID: 58995952997634312, guid: e040ba43eff57174384dea1bc8a59ba8, type: 3}
     - target: {fileID: 4167091249711045693, guid: 95243a8f450e09c4f8d4ce26573417bc, type: 3}
       propertyPath: m_UseGravity
       value: 0
