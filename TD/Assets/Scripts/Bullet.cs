@@ -37,6 +37,7 @@ public class Bullet : MonoBehaviour
             //Debug.Log("bullet destroyed");
             if (other.CompareTag("Enemy"))
             {
+                transform.GetComponent<Bullet_VFX>().Hit();
                 other.GetComponent<Enemy>().hp--;
             }
         }
