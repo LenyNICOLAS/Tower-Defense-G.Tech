@@ -8,6 +8,8 @@ public class TurretSpot : MonoBehaviour
     public GameObject crystalPrefab;
     public GameObject turretPrefab;
     public Transform bulletContainer;
+    public RectTransform TurretChoice;
+    public Vector3 offset;
 
     private GameObject turret;
     private GameObject crystal;
@@ -32,6 +34,11 @@ public class TurretSpot : MonoBehaviour
 
     public void OnMouseDown()
     {
+
+        TurretChoice.GetComponentInParent<ToggleVisibility>().toggle();
+        Vector3 pos = Input.mousePosition + offset;
+        pos.z = TurretChoice.position.z;
+        TurretChoice.position = pos;
 
         Destroy(crystal);
 
