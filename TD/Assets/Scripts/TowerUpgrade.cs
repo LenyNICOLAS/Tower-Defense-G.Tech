@@ -5,32 +5,40 @@ using UnityEngine;
 public class TowerUpgrade : MonoBehaviour
 {
 
-    public GameObject turretPrefab;
-    
-    private GameObject turret;
+    public GameObject NewTurretPrefab;
+
+    public GameObject tower;
 
 
     public void btn_amelioration()
     {
 
 
-       
-       
 
-        Debug.Log("Amélioration");
+        Transform parent = transform.Find("TurretSpot").GetComponent<Transform>();
+
+       Debug.Log("Amélioration");
+
+
+        Destroy(tower);
 
 
         //turret = Instantiate(turretPrefab);
 
-        turret = Instantiate(turretPrefab,
-                             transform.position + new Vector3(0, 1, 0),
-                             Quaternion.identity,
-                             transform) as GameObject;
+        GameObject turret = Instantiate(NewTurretPrefab, transform.TransformPoint(0, (float)-0.72, 0), Quaternion.identity, parent) as GameObject;
 
+
+
+        //turret = Instantiate(turretPrefab, new Vector3(0,0,0), Quaternion.identity) as GameObject;
+
+        
 
     }
 
 
-    
-    
+
+
+
+
+
 }

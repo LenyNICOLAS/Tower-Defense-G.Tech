@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7401763097833739993}
   - component: {fileID: 1742708079467814744}
   - component: {fileID: 4618109521491526131}
+  - component: {fileID: -860081320763129094}
   m_Layer: 2
   m_Name: Crystal
   m_TagString: Turret
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7006695030464100472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.69073284, y: 0, z: 1.1098459}
-  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7844332900999802150}
   m_Father: {fileID: 0}
@@ -197,6 +198,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: -5888501156312670508}
   SpellCast: {fileID: 8300000, guid: dfc04938c72091b4484af8bfcf2fb5ef, type: 3}
+--- !u!114 &-860081320763129094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7006695030464100472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17d00e15874ca445998a33e69b8d82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7844332901000229126
 GameObject:
   m_ObjectHideFlags: 0
