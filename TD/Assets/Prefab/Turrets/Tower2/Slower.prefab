@@ -789,6 +789,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal2
       objectReference: {fileID: 0}
+    - target: {fileID: 4865885612634424632, guid: e040ba43eff57174384dea1bc8a59ba8, type: 3}
+      propertyPath: range
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865885612634424632, guid: e040ba43eff57174384dea1bc8a59ba8, type: 3}
+      propertyPath: Cooldown
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5047696741359471322, guid: e040ba43eff57174384dea1bc8a59ba8, type: 3}
       propertyPath: m_RootOrder
       value: 1

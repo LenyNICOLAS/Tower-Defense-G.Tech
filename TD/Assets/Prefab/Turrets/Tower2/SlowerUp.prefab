@@ -11,6 +11,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3891686251448436872, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
+      propertyPath: range
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891686251448436872, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
+      propertyPath: Cooldown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891686251448436872, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
+      propertyPath: duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891686251448436872, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
+      propertyPath: intensity
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4429780076380311354, guid: edf7c1fd68e05484b964e461a2cd3179, type: 3}
       propertyPath: m_Color.b
       value: 0.5849056

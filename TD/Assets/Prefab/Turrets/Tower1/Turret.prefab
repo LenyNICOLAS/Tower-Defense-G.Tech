@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1229616748410539282, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217969253512545865, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
+      propertyPath: cadence
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8659239935140198471, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
       propertyPath: m_IsActive
       value: 0
