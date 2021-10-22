@@ -307,7 +307,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -137.01}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 150, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34525912
 MonoBehaviour:
@@ -604,6 +604,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6897844762264701389, guid: 3bc06964f4636914fa05fc03969fea70, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bc06964f4636914fa05fc03969fea70, type: 3}
 --- !u!1 &152493127
@@ -753,6 +757,10 @@ PrefabInstance:
     - target: {fileID: 842523644448911726, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 902888317581222247, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2192155678385775178, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
       propertyPath: m_RootOrder
@@ -1390,13 +1398,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4793495477166084451, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7785086217350215736, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8659239935140198479, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
       propertyPath: m_Name
-      value: Tower
+      value: TurretUp
       objectReference: {fileID: 0}
     - target: {fileID: 8659239935140198479, guid: 8361be53b9ad6b84ea9a6a79cf780a78, type: 3}
       propertyPath: m_Layer
@@ -2359,6 +2371,10 @@ PrefabInstance:
     - target: {fileID: 7193430886372789381, guid: ba92aab2186dbc04086d1fe17bc38d06, type: 3}
       propertyPath: duration
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836796734672358905, guid: ba92aab2186dbc04086d1fe17bc38d06, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba92aab2186dbc04086d1fe17bc38d06, type: 3}
