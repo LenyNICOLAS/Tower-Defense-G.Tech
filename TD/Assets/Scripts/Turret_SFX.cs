@@ -7,6 +7,7 @@ public class Turret_SFX : MonoBehaviour
     public AudioSource source;
     public AudioClip SpellCast;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class Turret_SFX : MonoBehaviour
         
     }
 
-
+    // SFX du lancement du sort
     public void Cast()
     {
         source.volume = 0.01f;

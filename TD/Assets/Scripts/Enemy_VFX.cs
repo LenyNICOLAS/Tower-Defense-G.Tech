@@ -9,6 +9,7 @@ public class Enemy_VFX : MonoBehaviour
 
     private GameObject VFX;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class Enemy_VFX : MonoBehaviour
         
     }
 
-
+    // VFX de la mort de l'ennemi
     public void Death()
     {
         GameObject _VFX = Instantiate(GolemDeath, transform.position, Quaternion.identity) as GameObject;
@@ -32,12 +33,14 @@ public class Enemy_VFX : MonoBehaviour
 
     }
 
+    // VFX de l'effet de ralentissement
     public void Slow()
     {
         VFX = Instantiate(SlowEffect, parent: transform) as GameObject;
         VFX.GetComponentInChildren<ParticleSystem>().Play();
     }
 
+    // fin du ralentissement
     public void UnSlow()
     {
         Destroy(VFX);

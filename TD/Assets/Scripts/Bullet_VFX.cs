@@ -7,6 +7,7 @@ public class Bullet_VFX : MonoBehaviour
     public GameObject SpellHit;
     public Vector3 pos;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class Bullet_VFX : MonoBehaviour
 
     }
 
-
+    // VFX a l'impact de la balle
     public void Hit()
     {
         GameObject _VFX = Instantiate(SpellHit, pos, Quaternion.identity) as GameObject;

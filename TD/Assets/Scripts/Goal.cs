@@ -6,6 +6,7 @@ public class Goal : MonoBehaviour
 {
     public int hp = 10;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class Goal : MonoBehaviour
 
     }
 
+    // Ennemi atteignant son objectif
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);

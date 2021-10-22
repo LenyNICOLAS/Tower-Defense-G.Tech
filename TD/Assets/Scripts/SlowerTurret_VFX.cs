@@ -19,12 +19,14 @@ public class SlowerTurret_VFX : MonoBehaviour
 
     }
 
+    // VFX d'apparition de la tour
     public void Pop()
     {
         GameObject VFX = Instantiate(TurretPop, transform.position, Quaternion.identity) as GameObject;
         VFX.GetComponentInChildren<ParticleSystem>().Play();
     }
 
+    // VFX du lancement du sort de ralentissement
     public void Cast()
     {
         Vector3 height;

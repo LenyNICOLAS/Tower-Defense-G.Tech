@@ -7,6 +7,7 @@ public class Enemy_SFX : MonoBehaviour
     public AudioSource source;
     public AudioClip GolemDeath;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class Enemy_SFX : MonoBehaviour
         
     }
 
+    // SFX de la mort de l'ennemi
     public void Death()
     {
         source.volume = 0.05f;

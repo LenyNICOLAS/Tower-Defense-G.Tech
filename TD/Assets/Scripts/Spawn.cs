@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Spawn : MonoBehaviour
 {
-
     public Transform goal;
     public GameObject EnemyPrefab;
     public GameObject SmallEnemyPrefab;
     public GameObject WaveContainer;
 
+    // parametre de gestion du spawn
     private int enemiesSpawned = 0;
     private int smallEnemiesSpawned = 0;
     private int totalEnemiesSpawned = 0;
@@ -46,11 +46,15 @@ public class Spawn : MonoBehaviour
             {
                 if (wave < maxWave)
                 {
+                    // si la vague precedente est finie et ce n'est pas la derniere
+                    // alors on prepare la suivante
                     SetNextWave(wave);
                     Debug.Log($"next wave : {wave + 1}/{maxWave}");
                 }
                 else
                 {
+                    // si la derniere vague est finie et il n'y a plus d'ennemi sur le terrain
+                    // alors la partie est gagnee
                     bool winCondition = totalEnemiesSpawned == GameManager.Instance.EnemiesKilled + GameManager.Instance.EnemiesPassed;
                     if (winCondition)
                     {
@@ -65,10 +69,13 @@ public class Spawn : MonoBehaviour
                 {
                     if (wave == 0)
                     {
+                        // la premiere vague se lance seulement si on appuie sur launch
                         if (isLaunched) ChooseEnemy();
                     }
                     else
                     {
+                        // les autres vagues se lancent apres un delai
+                        // ou si on appuie sur launch avant la fin de ce delai
                         if (isLaunched || Time.time - lastWaveSpawned > timeBeforeThisWave)
                         {
                             ChooseEnemy();
@@ -79,11 +86,13 @@ public class Spawn : MonoBehaviour
         }
     }
 
+    // ennemi sortant de la zone de spawn
     public void OnTriggerExit(Collider other)
     {
         enemyInSpawn = false;
     }
 
+    // lancement des vagues d'ennemis
     public void Launch()
     {
         if (isLaunched)
@@ -93,15 +102,20 @@ public class Spawn : MonoBehaviour
         else
         {
             isLaunched = true;
-
         }
     }
 
+    // choix de l'ennemi a spawn selon les parametres de la vague
     public void ChooseEnemy()
     {
+        // infos
         Debug.Log($"{enemiesSpawned}/{enemies}   {smallEnemiesSpawned}/{smallEnemies}");
+
         if (enemiesSpawned < enemies && smallEnemiesSpawned < smallEnemies)
         {
+            // s'il reste au moins un ennemi de chaque type a spawn
+
+            // choix de l'ennemi a spawn selon si l'ordre de spawn est predefini ou pas
             int queue = shuffle ? Random.Range(0, 2) : 0;
             if (queue == 0)
             {
@@ -116,17 +130,20 @@ public class Spawn : MonoBehaviour
         }
         else if (enemiesSpawned < enemies)
         {
+            // s'il reste seulement l'ennemi standard a spawn
             SpawnEnemy(EnemyPrefab);
             enemiesSpawned++;
 
         }
         else if (smallEnemiesSpawned < smallEnemies)
         {
+            // s'il reste seulement le petit ennemi a spawn
             SpawnEnemy(SmallEnemyPrefab);
             smallEnemiesSpawned++;
         }
         else
         {
+            // s'il ne reste plus d'ennemi : fin de vague
             waveFinished = true;
             lastWaveSpawned = Time.time;
             totalEnemiesSpawned += enemiesSpawned + smallEnemiesSpawned;
@@ -136,6 +153,7 @@ public class Spawn : MonoBehaviour
         }
     }
 
+    // creation de l'ennemi a spawn
     public void SpawnEnemy(GameObject prefab)
     {
         GameObject enemy = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
@@ -146,6 +164,7 @@ public class Spawn : MonoBehaviour
         enemyInSpawn = true;
     }
 
+    // passage a la vague suivante : on recupere les parametres de la vague
     public void SetNextWave(int i)
     {
         enemies = WaveContainer.transform.GetChild(i).GetComponent<Wave>().enemies;

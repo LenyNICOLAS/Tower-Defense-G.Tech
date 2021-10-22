@@ -6,17 +6,22 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    // VFX lorsque l'ennemi est ralenti
     public GameObject SlowEffect;
 
+    // stats de l'ennemi
     public float hp = 10;
     public float speed = 1;
 
+    // appel aux fonctions de la classe (pour les tests)
     public bool deathCall = false;
     public bool slowCall = false;
     public bool unSlowCall = false;
 
+    // parametres gerant l'etat de l'ennemi
     private float initialSpeed, slowStart, slowTime;
     private bool slowed = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +61,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // mort de l'ennemi
     public void Death()
     {
         transform.GetComponent<Enemy_VFX>().Death();
@@ -66,7 +72,7 @@ public class Enemy : MonoBehaviour
 
         deathCall = false;
     }
-
+    // ralentissement de l'ennemi
     public void Slow(float intensity, float _slowTime)
     {
         transform.GetComponent<Enemy_VFX>().Slow();
@@ -78,6 +84,7 @@ public class Enemy : MonoBehaviour
         slowCall = false;
     }
 
+    // retour a l'etat initial lorsque le ralentissement prend fin
     public void UnSlow()
     {
         transform.GetComponent<Enemy_VFX>().UnSlow();
@@ -87,6 +94,7 @@ public class Enemy : MonoBehaviour
         slowCall = false;
     }
 
+    // accesseur
     public bool IsSlowed()
     {
         return slowed;

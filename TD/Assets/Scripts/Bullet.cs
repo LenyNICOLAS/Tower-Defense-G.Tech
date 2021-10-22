@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    
+    // parametres de la balle
     public float speed = 1.0f;
     public Transform target = null;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    // destruction de la balle et degat sur target
     private void OnTriggerEnter(Collider other)
     {
         if (true)

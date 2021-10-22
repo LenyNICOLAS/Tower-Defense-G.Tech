@@ -8,6 +8,7 @@ public class SlowerManager : MonoBehaviour
     public RectTransform SlowerUpgrade;
     public Vector3 offset;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class SlowerManager : MonoBehaviour
 
     }
 
+    // affichage de l'UI pour ameliorer ou detruire la tour de ralentissement
     public void OnMouseDown()
     {
         if (GameManager.Instance.UIElementOn)
@@ -39,11 +41,13 @@ public class SlowerManager : MonoBehaviour
         }
     }
 
+    // amelioration de la tour
     public void Upgrade()
     {
         TurretSpot.GetComponent<TurretSpot>().BuildSlowerUp();
     }
 
+    // destruction de la tour
     public void Delete()
     {
         TurretSpot.GetComponent<TurretSpot>().Delete();

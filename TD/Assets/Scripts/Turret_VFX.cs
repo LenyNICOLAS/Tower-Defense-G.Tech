@@ -6,6 +6,7 @@ public class Turret_VFX : MonoBehaviour
 {
     public GameObject TurretPop;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class Turret_VFX : MonoBehaviour
 
     }
 
-
+    // VFX d'apparition de la tour
     public void Pop()
     {
         GameObject VFX = Instantiate(TurretPop, transform.position, Quaternion.identity) as GameObject;

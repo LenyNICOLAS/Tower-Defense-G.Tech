@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TurretSpot : MonoBehaviour
 {
+    // prefabs de tours
     public GameObject TurretPrefab;
     public GameObject TurretUpPrefab;
     public GameObject SlowerPrefab;
@@ -29,7 +30,7 @@ public class TurretSpot : MonoBehaviour
         
     }
 
-
+    // affichage de l'UI pour choisir le type de tour
     public void OnMouseDown()
     {
         if (turret == null)
@@ -54,6 +55,7 @@ public class TurretSpot : MonoBehaviour
                        
     }
 
+    // construction de la tour standard
     public void BuildTurret()
     {
         Destroy(turret);
@@ -69,6 +71,7 @@ public class TurretSpot : MonoBehaviour
         GameManager.Instance.UIElementOn = false;
     }
 
+    // construction de la tour standard améliorée
     public void BuildTurretUp()
     {
         Destroy(turret);
@@ -84,6 +87,7 @@ public class TurretSpot : MonoBehaviour
         GameManager.Instance.UIElementOn = false;
     }
 
+    // construction de la tour de ralentissement
     public void BuildSlower()
     {
         Destroy(turret);
@@ -98,6 +102,7 @@ public class TurretSpot : MonoBehaviour
         GameManager.Instance.UIElementOn = false;
     }
 
+    // construction de la tour de ralentissement améliorée
     public void BuildSlowerUp()
     {
         Destroy(turret);
@@ -112,6 +117,7 @@ public class TurretSpot : MonoBehaviour
         GameManager.Instance.UIElementOn = false;
     }
    
+    // destruction de la tour en place
     public void Delete()
     {
         Destroy(turret);

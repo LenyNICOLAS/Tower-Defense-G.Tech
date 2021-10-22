@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ToggleVisibility : MonoBehaviour
 {
-
     CanvasGroup canvasGroup;
     private bool gameIsWon = false;
     private bool gameIsLost = false;
@@ -46,6 +45,7 @@ public class ToggleVisibility : MonoBehaviour
         }
     }
 
+    // apparition et disparition de l'UI
     public void toggle()
     {
         canvasGroup.alpha = canvasGroup.alpha == 0 ? 1 : 0;

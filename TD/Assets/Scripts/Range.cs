@@ -6,6 +6,7 @@ public class Range : MonoBehaviour
 {
     public GameObject turret;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class Range : MonoBehaviour
         
     }
 
+    // detection d'un ennemi dans la range de la tour
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log("enemy detected");
@@ -27,6 +29,7 @@ public class Range : MonoBehaviour
         }
     }
 
+    // ennemi hors de portee
     private void OnTriggerExit(Collider other)
     {
         //Debug.Log("enemy out of range");

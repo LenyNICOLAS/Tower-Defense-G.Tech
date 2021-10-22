@@ -19,7 +19,7 @@ public class SlowerTurret_SFX : MonoBehaviour
 
     }
 
-
+    // SFX du lancement du sort de ralentissement
     public void Cast()
     {
         source.volume = 0.01f;

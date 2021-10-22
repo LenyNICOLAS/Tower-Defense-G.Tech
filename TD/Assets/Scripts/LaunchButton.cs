@@ -7,6 +7,7 @@ public class LaunchButton : MonoBehaviour
 {
     CanvasGroup canvasGroup;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class LaunchButton : MonoBehaviour
         
     }
 
+    // modifications du bouton launch
     public void ChangeButton()
     {
         if (GameManager.Instance.GetWave() == 1)
